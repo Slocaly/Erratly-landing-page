@@ -1,0 +1,46 @@
+{
+	"en": [
+		{
+			"q": "Does it work in any app?",
+			"a": "Yes — Erratly runs system-wide. Any text field, in any Mac app, once you’ve granted accessibility access."
+		},
+		{
+			"q": "Does my text ever leave my Mac?",
+			"a": "No. Corrections happen entirely on-device — nothing is sent anywhere."
+		},
+		{
+			"q": "What if it fixes the wrong thing?",
+			"a": "Undo it like any edit — Cmd+Z puts your original text right back."
+		},
+		{
+			"q": "Can I change the shortcut?",
+			"a": "Yes, the double-tap key is configurable in Preferences if Ctrl is already spoken for."
+		},
+		{
+			"q": "Does it work in languages other than English?",
+			"a": "Yes — French is built in, with more languages on the way."
+		}
+	],
+	"fr": [
+		{
+			"q": "Ça marche dans n’importe quelle appli ?",
+			"a": "Oui — Erratly fonctionne sur tout le système. N’importe quel champ de texte, dans n’importe quelle appli Mac, une fois l’accès à l’accessibilité accordé."
+		},
+		{
+			"q": "Mon texte quitte-t-il mon Mac ?",
+			"a": "Non. Les corrections se font entièrement sur l’appareil — rien n’est envoyé nulle part."
+		},
+		{
+			"q": "Et si ça corrige la mauvaise chose ?",
+			"a": "Annulez comme n’importe quelle modification — Cmd+Z restaure votre texte original."
+		},
+		{
+			"q": "Peut-on changer le raccourci ?",
+			"a": "Oui, le double-appui est personnalisable dans les Préférences si Ctrl est déjà pris."
+		},
+		{
+			"q": "Ça marche dans d’autres langues que l’anglais ?",
+			"a": "Oui — le français est intégré, d’autres langues arrivent bientôt."
+		}
+	]
+}
