@@ -63,7 +63,20 @@ function captureSelectionIfInsideDemo() {
 		return;
 	}
 	const range = selection.getRangeAt(0);
-	savedRange = demo && demo.contains(range.commonAncestorContainer) ? range.cloneRange() : null;
+	if (!demo || !demo.contains(range.startContainer)) {
+		savedRange = null;
+		updateButtonStates();
+		return;
+	}
+	// Chrome's triple-click selects the whole demo paragraph but pushes the
+	// range's end boundary into the next sibling (offset 0) even though only
+	// demo's own text is visibly highlighted; clamp it back inside demo
+	// instead of discarding an otherwise valid selection.
+	const clonedRange = range.cloneRange();
+	if (!demo.contains(clonedRange.endContainer)) {
+		clonedRange.setEnd(demo, demo.childNodes.length);
+	}
+	savedRange = clonedRange;
 	updateButtonStates();
 }
 
