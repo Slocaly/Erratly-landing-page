@@ -4,7 +4,7 @@ import strings from "../data/strings.json";
 import faq from "../data/faq.json";
 
 interface Props {
-	lang: "en" | "fr";
+  lang: "en" | "fr";
 }
 
 const { lang } = Astro.props;
@@ -14,778 +14,762 @@ const locales = ["en", "fr"];
 ---
 
 <html lang={lang} data-astro-cid-landing>
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Erratly — Fix typos instantly, anywhere on your Mac</title>
-		<meta
-			name="description"
-			content="Select any misspelled text, in any app, anywhere on your Mac. Double-press Ctrl. Erratly corrects it on the spot."
-		/>
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link
-			href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap"
-			rel="stylesheet"
-		/>
-	</head>
-	<body>
-		<div class="page">
-			<header class="erratly-header header">
-				<span class="brand">
-					<img
-						src="/Erratly_icon_round.png"
-						alt="Erratly"
-						class="brand-icon"
-					/>
-					<span class="brand-name">Erratly</span>
-				</span>
-				<div class="header-right">
-					<div class="lang-switch">
-						{
-							locales.map((locale) =>
-								locale === lang ? (
-									<span class="lang-btn is-active">
-										{locale.toUpperCase()}
-									</span>
-								) : (
-									<a
-										class="lang-btn"
-										href={getRelativeLocaleUrl(locale, "/")}
-									>
-										{locale.toUpperCase()}
-									</a>
-								),
-							)
-						}
-					</div>
-				</div>
-			</header>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/png" href="/Erratly_icon_round.png" />
+    <link rel="icon" href="/Erratly_icon_round.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Erratly — Fix typos instantly, anywhere on your Mac</title>
+    <meta
+      name="description"
+      content="Select any misspelled text, in any app, anywhere on your Mac. Double-press Ctrl. Erratly corrects it on the spot."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="page">
+      <header class="erratly-header header">
+        <span class="brand">
+          <img src="/Erratly_icon_round.png" alt="Erratly" class="brand-icon" />
+          <span class="brand-name">Erratly</span>
+        </span>
+        <div class="header-right">
+          <div class="lang-switch">
+            {
+              locales.map((locale) =>
+                locale === lang ? (
+                  <span class="lang-btn is-active">{locale.toUpperCase()}</span>
+                ) : (
+                  <a class="lang-btn" href={getRelativeLocaleUrl(locale, "/")}>
+                    {locale.toUpperCase()}
+                  </a>
+                ),
+              )
+            }
+          </div>
+        </div>
+      </header>
 
-			<main class="erratly-main main">
-				<h1 class="hero-title">
-					{t.struck}{" "}
-					<span class="struck">
-						{t.later}
-					</span>
-					<br />
-					<span class="hidden">
-						{t.struck}{" "}
-					</span>
-					<span class="correction">
-						<span class="highlight">
-							{t.highlightWord}
-						</span>
-						{t.trailing}
-					</span>
-				</h1>
+      <main class="erratly-main main">
+        <h1 class="hero-title">
+          {t.struck}{" "}
+          <span class="struck">
+            {t.later}
+          </span>
+          <br />
+          <span class="hidden">
+            {t.struck}{" "}
+          </span>
+          <span class="correction">
+            <span class="highlight">
+              {t.highlightWord}
+            </span>
+            {t.trailing}
+          </span>
+        </h1>
 
-				<p class="hero-paragraph">{t.paragraph}</p>
+        <p class="hero-paragraph">{t.paragraph}</p>
 
-				<div class="cta-row">
-					<a href="https://github.com/Slocaly/Erratly/releases/latest/download/Erratly.zip" class="btn-primary">{t.ctaDownload}</a>
-					<div class="shortcut-pill">
-						&#8963;<span class="shortcut-plus">&nbsp;+&nbsp;</span
-						>&#8963;
-						<span class="shortcut-label">{t.shortcutLabel}</span>
-					</div>
-				</div>
+        <div class="cta-row">
+          <a
+            href="https://github.com/Slocaly/Erratly/releases/latest/download/Erratly.zip"
+            class="btn-primary">{t.ctaDownload}</a
+          >
+          <div class="shortcut-pill">
+            &#8963;<span class="shortcut-plus">&nbsp;+&nbsp;</span>&#8963;
+            <span class="shortcut-label">{t.shortcutLabel}</span>
+          </div>
+        </div>
 
-				<section id="try" class="try-section">
-					<span class="try-badge">{t.tryBadge}</span>
-					<span class="try-clip"></span>
+        <section id="try" class="try-section">
+          <span class="try-badge">{t.tryBadge}</span>
+          <span class="try-clip"></span>
 
-					<div class="erratly-try-inner try-inner">
-						<div class="try-instruction">{t.instruction}</div>
+          <div class="erratly-try-inner try-inner">
+            <div class="try-instruction">{t.instruction}</div>
 
-						<div class="demo-text-wrap">
-							<div
-								class="erratly-demo-text demo-text"
-								spellcheck="false"
-								tabindex="0"
-								data-demo-text
-							>
-							</div>
-							<div class="demo-loader" data-demo-loader hidden>
-								<img
-									src="/Erratly_icon_round.png"
-									alt=""
-									class="demo-loader-icon"
-								/>
-							</div>
-						</div>
+            <div class="demo-text-wrap">
+              <div
+                class="erratly-demo-text demo-text"
+                spellcheck="false"
+                tabindex="0"
+                data-demo-text
+              >
+              </div>
+              <div class="demo-loader" data-demo-loader hidden>
+                <img
+                  src="/Erratly_icon_round.png"
+                  alt=""
+                  class="demo-loader-icon"
+                />
+              </div>
+            </div>
 
-						<div class="try-actions">
-							<button
-								type="button"
-								class="btn-select-all"
-								data-demo-select-all>{t.selectAllBtn}</button
-							>
-							<button
-								type="button"
-								class="btn-simulate"
-								data-demo-simulate
-								disabled>{t.simulateBtn}</button
-							>
-							<button
-								type="button"
-								class="btn-reset"
-								data-demo-reset
-								hidden>{t.resetBtn}</button
-							>
-							<span class="grow"></span>
-							<span class="demo-status" data-demo-status></span>
-						</div>
-					</div>
-				</section>
+            <div class="try-actions">
+              <button type="button" class="btn-select-all" data-demo-select-all
+                >{t.selectAllBtn}</button
+              >
+              <button
+                type="button"
+                class="btn-simulate"
+                data-demo-simulate
+                disabled>{t.simulateBtn}</button
+              >
+              <button type="button" class="btn-reset" data-demo-reset hidden
+                >{t.resetBtn}</button
+              >
+              <span class="grow"></span>
+              <span class="demo-status" data-demo-status></span>
+            </div>
+          </div>
+        </section>
 
-				<div class="demo-modal-backdrop" data-demo-modal hidden>
-					<div
-						class="demo-modal"
-						role="dialog"
-						aria-modal="true"
-						aria-labelledby="demo-modal-label"
-					>
-						<div class="demo-modal-label" id="demo-modal-label">
-							{t.modalLabel}
-						</div>
-						<p class="demo-modal-diff" data-demo-modal-diff></p>
-						<div class="demo-modal-actions">
-							<button
-								type="button"
-								class="demo-modal-cancel"
-								data-demo-modal-cancel>{t.cancelBtn}</button
-							>
-							<button
-								type="button"
-								class="demo-modal-accept"
-								data-demo-modal-accept>{t.acceptBtn}</button
-							>
-						</div>
-					</div>
-				</div>
+        <div class="demo-modal-backdrop" data-demo-modal hidden>
+          <div
+            class="demo-modal"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="demo-modal-label"
+          >
+            <div class="demo-modal-label" id="demo-modal-label">
+              {t.modalLabel}
+            </div>
+            <p class="demo-modal-diff" data-demo-modal-diff></p>
+            <div class="demo-modal-actions">
+              <button
+                type="button"
+                class="demo-modal-cancel"
+                data-demo-modal-cancel>{t.cancelBtn}</button
+              >
+              <button
+                type="button"
+                class="demo-modal-accept"
+                data-demo-modal-accept>{t.acceptBtn}</button
+              >
+            </div>
+          </div>
+        </div>
 
-				<div class="section-label-row">
-					<span class="section-label">{t.howItWorksLabel}</span>
-				</div>
+        <div class="section-label-row">
+          <span class="section-label">{t.howItWorksLabel}</span>
+        </div>
 
-				<div class="erratly-steps steps-grid">
-					<div class="step">
-						<div class="step-number">01</div>
-						<div class="step-title">{t.step1Title}</div>
-						<div class="step-desc">{t.step1Desc}</div>
-					</div>
-					<div class="step">
-						<div class="step-number">02</div>
-						<div class="step-title">{t.step2Title}</div>
-						<div class="step-desc">{t.step2Desc}</div>
-					</div>
-					<div class="step">
-						<div class="step-number">03</div>
-						<div class="step-title">{t.step3Title}</div>
-						<div class="step-desc">{t.step3Desc}</div>
-					</div>
-				</div>
+        <div class="erratly-steps steps-grid">
+          <div class="step">
+            <div class="step-number">01</div>
+            <div class="step-title">{t.step1Title}</div>
+            <div class="step-desc">{t.step1Desc}</div>
+          </div>
+          <div class="step">
+            <div class="step-number">02</div>
+            <div class="step-title">{t.step2Title}</div>
+            <div class="step-desc">{t.step2Desc}</div>
+          </div>
+          <div class="step">
+            <div class="step-number">03</div>
+            <div class="step-title">{t.step3Title}</div>
+            <div class="step-desc">{t.step3Desc}</div>
+          </div>
+        </div>
 
-				<div class="section-label-row">
-					<span class="section-label">{t.faqLabel}</span>
-				</div>
+        <div class="section-label-row">
+          <span class="section-label">{t.faqLabel}</span>
+        </div>
 
-				<div class="faq-section">
-					{
-						faqItems.map((item) => (
-							<div class="faq-item" data-faq-item>
-								<div class="faq-question" data-faq-question>
-									<span class="faq-marker" data-faq-marker>
-										+
-									</span>
-									<span class="faq-question-text">
-										{item.q}
-									</span>
-								</div>
-								<div class="faq-answer">{item.a}</div>
-							</div>
-						))
-					}
-				</div>
-			</main>
+        <div class="faq-section">
+          {
+            faqItems.map((item) => (
+              <div class="faq-item" data-faq-item>
+                <div class="faq-question" data-faq-question>
+                  <span class="faq-marker" data-faq-marker>
+                    +
+                  </span>
+                  <span class="faq-question-text">{item.q}</span>
+                </div>
+                <div class="faq-answer">{item.a}</div>
+              </div>
+            ))
+          }
+        </div>
+      </main>
 
-			<footer class="erratly-footer footer">
-				<span class="footer-copyright"
-					>{t.footerCopyright} - Lucas Audart</span
-				>
-			</footer>
-			<div class="diff-added"></div>
-			<div class="diff-removed"></div>
-		</div>
+      <footer class="erratly-footer footer">
+        <span class="footer-copyright">{t.footerCopyright} - Lucas Audart</span>
+      </footer>
+      <div class="diff-added"></div>
+      <div class="diff-removed"></div>
+    </div>
 
-		<script src="../scripts/interactive.js"></script>
-	</body>
+    <script src="../scripts/interactive.js"></script>
+  </body>
 </html>
 
 <style>
-	:global(html, body) {
-		margin: 0;
-		background: #f6efd8;
-		font-family: "JetBrains Mono", monospace;
-		color: #20180f;
-	}
-	:global(*) {
-		box-sizing: border-box;
-	}
-	:global(::selection) {
-		background: #b3392e;
-		color: #f6efd8;
-	}
-	:global(a) {
-		color: inherit;
-	}
+  :global(html, body) {
+    margin: 0;
+    background: #f6efd8;
+    font-family: "JetBrains Mono", monospace;
+    color: #20180f;
+  }
+  :global(*) {
+    box-sizing: border-box;
+  }
+  :global(::selection) {
+    background: #b3392e;
+    color: #f6efd8;
+  }
+  :global(a) {
+    color: inherit;
+  }
 
-	.page {
-		background: #f6efd8;
-		background-image: repeating-linear-gradient(
-			#f6efd8 0 30px,
-			#b3392e1c 30px 31px
-		);
-		background-position: 0 118px;
-		min-height: 100vh;
-	}
+  .page {
+    background: #f6efd8;
+    background-image: repeating-linear-gradient(
+      #f6efd8 0 30px,
+      #b3392e1c 30px 31px
+    );
+    background-position: 0 118px;
+    min-height: 100vh;
+  }
 
-	.header {
-		max-width: 80rem;
-		margin: 0 auto;
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		padding: 34px 28px 0;
-	}
-	.brand {
-		display: flex;
-		align-items: center;
-		gap: 9px;
-	}
-	.brand-icon {
-		width: 28px;
-		height: 28px;
-		border-radius: 7px;
-		display: block;
-	}
-	.brand-name {
-		font:
-			700 15px "JetBrains Mono",
-			monospace;
-		letter-spacing: 0.1em;
-		text-transform: uppercase;
-	}
-	.header-right {
-		display: flex;
-		align-items: center;
-		gap: 14px;
-	}
-	.tagline {
-		font:
-			400 12px "JetBrains Mono",
-			monospace;
-		color: #8a7f63;
-	}
-	.lang-switch {
-		display: flex;
-		align-items: center;
-		gap: 2px;
-		background: #20180f;
-		border-radius: 3px;
-		padding: 3px;
-	}
-	.lang-btn {
-		border: none;
-		text-decoration: none;
-		display: inline-block;
-		cursor: pointer;
-		font:
-			700 11px "JetBrains Mono",
-			monospace;
-		letter-spacing: 0.05em;
-		padding: 5px 9px;
-		border-radius: 2px;
-		background: transparent;
-		color: #f6efd8;
-	}
-	.lang-btn.is-active {
-		background: #f6efd8;
-		color: #20180f;
-	}
+  .header {
+    max-width: 80rem;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 34px 28px 0;
+  }
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+  }
+  .brand-icon {
+    width: 28px;
+    height: 28px;
+    border-radius: 7px;
+    display: block;
+  }
+  .brand-name {
+    font:
+      700 15px "JetBrains Mono",
+      monospace;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  .header-right {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .tagline {
+    font:
+      400 12px "JetBrains Mono",
+      monospace;
+    color: #8a7f63;
+  }
+  .lang-switch {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    background: #20180f;
+    border-radius: 3px;
+    padding: 3px;
+  }
+  .lang-btn {
+    border: none;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    font:
+      700 11px "JetBrains Mono",
+      monospace;
+    letter-spacing: 0.05em;
+    padding: 5px 9px;
+    border-radius: 2px;
+    background: transparent;
+    color: #f6efd8;
+  }
+  .lang-btn.is-active {
+    background: #f6efd8;
+    color: #20180f;
+  }
 
-	.main {
-		max-width: 80rem;
-		margin: 0 auto;
-		padding: 64px 28px 0;
-	}
+  .main {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 64px 28px 0;
+  }
 
-	.hero-title {
-		font:
-			700 clamp(36px, 5.6vw, 64px) / 1.22 "JetBrains Mono",
-			monospace;
-		margin: 0 0 22px;
-		letter-spacing: -0.01em;
-	}
+  .hero-title {
+    font:
+      700 clamp(36px, 5.6vw, 64px) / 1.22 "JetBrains Mono",
+      monospace;
+    margin: 0 0 22px;
+    letter-spacing: -0.01em;
+  }
 
-	.grow {
-		flex-grow: 1;
-	}
+  .grow {
+    flex-grow: 1;
+  }
 
-	.struck {
-		position: relative;
-		display: inline-block;
-		color: #20180f;
-		animation: struck-color 0.45s ease-in 0.5s forwards;
-	}
-	.struck::after {
-		content: "";
-		position: absolute;
-		left: 0;
-		top: 56%;
-		width: 100%;
-		height: 3px;
-		background: #b3392e;
-		transform: scaleX(0);
-		transform-origin: left;
-		animation: struck-line 0.45s ease-in 0.5s forwards;
-	}
-	.highlight {
-		color: #b3392e;
-	}
-	.correction {
-		display: inline-block;
-		opacity: 0;
-		transform: translateY(6px);
-		animation: correction-in 0.5s ease-out 1s forwards;
-	}
-	.glyph {
-		font-size: 0.45em;
-		vertical-align: sub;
-		margin-left: 2px;
-	}
+  .struck {
+    position: relative;
+    display: inline-block;
+    color: #20180f;
+    animation: struck-color 0.45s ease-in 0.5s forwards;
+  }
+  .struck::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 56%;
+    width: 100%;
+    height: 3px;
+    background: #b3392e;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: struck-line 0.45s ease-in 0.5s forwards;
+  }
+  .highlight {
+    color: #b3392e;
+  }
+  .correction {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(6px);
+    animation: correction-in 0.5s ease-out 1s forwards;
+  }
+  .glyph {
+    font-size: 0.45em;
+    vertical-align: sub;
+    margin-left: 2px;
+  }
 
-	.hidden {
-		opacity: 0;
-	}
+  .hidden {
+    opacity: 0;
+  }
 
-	@keyframes struck-color {
-		to {
-			color: #8a7f63;
-		}
-	}
-	@keyframes struck-line {
-		to {
-			transform: scaleX(1);
-		}
-	}
-	@keyframes correction-in {
-		to {
-			opacity: 1;
-			transform: translateY(0);
-		}
-	}
+  @keyframes struck-color {
+    to {
+      color: #8a7f63;
+    }
+  }
+  @keyframes struck-line {
+    to {
+      transform: scaleX(1);
+    }
+  }
+  @keyframes correction-in {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 
-	@media (prefers-reduced-motion: reduce) {
-		.struck,
-		.struck::after,
-		.correction {
-			animation: none;
-			opacity: 1;
-			transform: none;
-			color: #8a7f63;
-		}
-		.struck::after {
-			transform: scaleX(1);
-		}
-	}
+  @media (prefers-reduced-motion: reduce) {
+    .struck,
+    .struck::after,
+    .correction {
+      animation: none;
+      opacity: 1;
+      transform: none;
+      color: #8a7f63;
+    }
+    .struck::after {
+      transform: scaleX(1);
+    }
+  }
 
-	.hero-paragraph {
-		font:
-			400 17px / 1.7 "JetBrains Mono",
-			monospace;
-		color: #4a4030;
-		max-width: 520px;
-		margin: 0 0 28px;
-	}
+  .hero-paragraph {
+    font:
+      400 17px / 1.7 "JetBrains Mono",
+      monospace;
+    color: #4a4030;
+    max-width: 520px;
+    margin: 0 0 28px;
+  }
 
-	.cta-row {
-		display: flex;
-		align-items: center;
-		gap: 18px;
-		flex-wrap: wrap;
-		margin-bottom: 64px;
-	}
-	.btn-primary {
-		text-decoration: none;
-		font:
-			700 13px "JetBrains Mono",
-			monospace;
-		letter-spacing: 0.04em;
-		background: #20180f;
-		color: #f6efd8;
-		border-radius: 3px;
-		padding: 13px 22px;
-	}
-	.shortcut-pill {
-		display: inline-flex;
-		align-items: center;
-		gap: 8px;
-		background: #20180f;
-		color: #f6efd8;
-		border-radius: 3px;
-		padding: 9px 14px;
-		font:
-			700 15px "JetBrains Mono",
-			monospace;
-	}
-	.shortcut-plus {
-		opacity: 0.5;
-	}
-	.shortcut-label {
-		font-weight: 400;
-		opacity: 0.7;
-		margin-left: 10px;
-		font-size: 12px;
-	}
+  .cta-row {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    flex-wrap: wrap;
+    margin-bottom: 64px;
+  }
+  .btn-primary {
+    text-decoration: none;
+    font:
+      700 13px "JetBrains Mono",
+      monospace;
+    letter-spacing: 0.04em;
+    background: #20180f;
+    color: #f6efd8;
+    border-radius: 3px;
+    padding: 13px 22px;
+  }
+  .shortcut-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #20180f;
+    color: #f6efd8;
+    border-radius: 3px;
+    padding: 9px 14px;
+    font:
+      700 15px "JetBrains Mono",
+      monospace;
+  }
+  .shortcut-plus {
+    opacity: 0.5;
+  }
+  .shortcut-label {
+    font-weight: 400;
+    opacity: 0.7;
+    margin-left: 10px;
+    font-size: 12px;
+  }
 
-	.try-section {
-		border: 2px solid #20180f;
-		border-radius: 3px;
-		padding: 0;
-		background: #fbf6e6;
-		position: relative;
-		margin-bottom: 72px;
-		box-shadow: 0 10px 30px rgba(32, 24, 15, 0.14);
-	}
-	.try-badge {
-		position: absolute;
-		top: -13px;
-		left: 20px;
-		background: #20180f;
-		color: #f6efd8;
-		font:
-			700 11px "JetBrains Mono",
-			monospace;
-		padding: 3px 10px;
-		letter-spacing: 0.1em;
-		text-transform: uppercase;
-	}
-	.try-clip {
-		position: absolute;
-		top: -22px;
-		right: 24px;
-		width: 24px;
-		height: 48px;
-		background: #c9c2ab;
-		border-radius: 2px;
-		transform: rotate(6deg);
-		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
-	}
-	.try-inner {
-		padding: 36px 34px 30px;
-	}
-	.try-instruction {
-		font:
-			400 12px "JetBrains Mono",
-			monospace;
-		color: #8a7f63;
-		margin-bottom: 14px;
-	}
-	.demo-text-wrap {
-		position: relative;
-		margin-bottom: 16px;
-	}
-	.demo-text {
-		font:
-			400 20px / 1.9 "JetBrains Mono",
-			monospace;
-		color: #20180f;
-		outline: none;
-		min-height: 100px;
-		caret-color: #b3392e;
-		border-bottom: 1px dashed #20180f33;
-		padding-bottom: 16px;
-	}
-	.demo-loader:not([hidden]) {
-		position: absolute;
-		inset: 0;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		background: rgba(246, 239, 216, 0.85);
-	}
-	.demo-loader-icon {
-		width: 40px;
-		height: 40px;
-		transform-origin: center;
-		animation: demo-loader-spin 1.1s ease-in-out infinite;
-	}
-	@keyframes demo-loader-spin {
-		to {
-			transform: rotate(360deg);
-		}
-	}
-	@media (prefers-reduced-motion: reduce) {
-		.demo-loader-icon {
-			animation: none;
-		}
-	}
-	.try-actions {
-		display: flex;
-		align-items: center;
-		justify-content: start;
-		flex-wrap: wrap;
-		gap: 12px;
-	}
-	.btn-simulate {
-		font:
-			700 12px "JetBrains Mono",
-			monospace;
-		background: #b3392e;
-		color: #f6efd8;
-		border: none;
-		border-radius: 2px;
-		padding: 10px 16px;
-		cursor: pointer;
-	}
-	.btn-select-all,
-	.btn-reset {
-		font:
-			700 12px "JetBrains Mono",
-			monospace;
-		background: transparent;
-		color: #b3392e;
-		border: 1px solid #b3392e;
-		border-radius: 2px;
-		padding: 10px 16px;
-		cursor: pointer;
-	}
-	.demo-status {
-		font:
-			600 13px "JetBrains Mono",
-			monospace;
-		color: #b3392e;
-		min-height: 16px;
-	}
-	.btn-simulate:disabled,
-	.btn-select-all:disabled,
-	.btn-reset:disabled {
-		opacity: 0.5;
-		cursor: not-allowed;
-	}
+  .try-section {
+    border: 2px solid #20180f;
+    border-radius: 3px;
+    padding: 0;
+    background: #fbf6e6;
+    position: relative;
+    margin-bottom: 72px;
+    box-shadow: 0 10px 30px rgba(32, 24, 15, 0.14);
+  }
+  .try-badge {
+    position: absolute;
+    top: -13px;
+    left: 20px;
+    background: #20180f;
+    color: #f6efd8;
+    font:
+      700 11px "JetBrains Mono",
+      monospace;
+    padding: 3px 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  .try-clip {
+    position: absolute;
+    top: -22px;
+    right: 24px;
+    width: 24px;
+    height: 48px;
+    background: #c9c2ab;
+    border-radius: 2px;
+    transform: rotate(6deg);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  }
+  .try-inner {
+    padding: 36px 34px 30px;
+  }
+  .try-instruction {
+    font:
+      400 12px "JetBrains Mono",
+      monospace;
+    color: #8a7f63;
+    margin-bottom: 14px;
+  }
+  .demo-text-wrap {
+    position: relative;
+    margin-bottom: 16px;
+  }
+  .demo-text {
+    font:
+      400 20px / 1.9 "JetBrains Mono",
+      monospace;
+    color: #20180f;
+    outline: none;
+    min-height: 100px;
+    caret-color: #b3392e;
+    border-bottom: 1px dashed #20180f33;
+    padding-bottom: 16px;
+  }
+  .demo-loader:not([hidden]) {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(246, 239, 216, 0.85);
+  }
+  .demo-loader-icon {
+    width: 40px;
+    height: 40px;
+    transform-origin: center;
+    animation: demo-loader-spin 1.1s ease-in-out infinite;
+  }
+  @keyframes demo-loader-spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .demo-loader-icon {
+      animation: none;
+    }
+  }
+  .try-actions {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .btn-simulate {
+    font:
+      700 12px "JetBrains Mono",
+      monospace;
+    background: #b3392e;
+    color: #f6efd8;
+    border: none;
+    border-radius: 2px;
+    padding: 10px 16px;
+    cursor: pointer;
+  }
+  .btn-select-all,
+  .btn-reset {
+    font:
+      700 12px "JetBrains Mono",
+      monospace;
+    background: transparent;
+    color: #b3392e;
+    border: 1px solid #b3392e;
+    border-radius: 2px;
+    padding: 10px 16px;
+    cursor: pointer;
+  }
+  .demo-status {
+    font:
+      600 13px "JetBrains Mono",
+      monospace;
+    color: #b3392e;
+    min-height: 16px;
+  }
+  .btn-simulate:disabled,
+  .btn-select-all:disabled,
+  .btn-reset:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
 
-	.demo-modal-backdrop:not([hidden]) {
-		position: fixed;
-		inset: 0;
-		background: rgba(32, 24, 15, 0.55);
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		padding: 20px;
-		z-index: 10;
-	}
-	.demo-modal {
-		background: #fbf6e6;
-		border: 2px solid #20180f;
-		border-radius: 3px;
-		box-shadow: 0 10px 30px rgba(32, 24, 15, 0.14);
-		padding: 28px 32px;
-		max-width: 560px;
-		width: 100%;
-	}
-	.demo-modal-label {
-		font:
-			700 12px "JetBrains Mono",
-			monospace;
-		letter-spacing: 0.1em;
-		text-transform: uppercase;
-		color: #8a7f63;
-		margin-bottom: 14px;
-	}
-	.demo-modal-diff {
-		font:
-			400 20px / 1.9 "JetBrains Mono",
-			monospace;
-		color: #20180f;
-		margin: 0 0 24px;
-	}
-	.diff-removed {
-		background: #b3392e1f;
-		color: #b3392e;
-		text-decoration: line-through;
-		border-radius: 2px;
-		padding: 1px 3px;
-	}
-	.diff-added {
-		background: #2f6f4724;
-		color: #2f6f47;
-		border-radius: 2px;
-		padding: 1px 3px;
-	}
-	.demo-modal-actions {
-		display: flex;
-		justify-content: flex-end;
-		gap: 12px;
-	}
-	.demo-modal-cancel {
-		font:
-			700 12px "JetBrains Mono",
-			monospace;
-		background: transparent;
-		color: #b3392e;
-		border: 1px solid #b3392e;
-		border-radius: 2px;
-		padding: 10px 16px;
-		cursor: pointer;
-	}
-	.demo-modal-accept {
-		font:
-			700 13px "JetBrains Mono",
-			monospace;
-		letter-spacing: 0.04em;
-		background: #20180f;
-		color: #f6efd8;
-		border: none;
-		border-radius: 3px;
-		padding: 13px 22px;
-		cursor: pointer;
-	}
+  .demo-modal-backdrop:not([hidden]) {
+    position: fixed;
+    inset: 0;
+    background: rgba(32, 24, 15, 0.55);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    z-index: 10;
+  }
+  .demo-modal {
+    background: #fbf6e6;
+    border: 2px solid #20180f;
+    border-radius: 3px;
+    box-shadow: 0 10px 30px rgba(32, 24, 15, 0.14);
+    padding: 28px 32px;
+    max-width: 560px;
+    width: 100%;
+  }
+  .demo-modal-label {
+    font:
+      700 12px "JetBrains Mono",
+      monospace;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #8a7f63;
+    margin-bottom: 14px;
+  }
+  .demo-modal-diff {
+    font:
+      400 20px / 1.9 "JetBrains Mono",
+      monospace;
+    color: #20180f;
+    margin: 0 0 24px;
+  }
+  .diff-removed {
+    background: #b3392e1f;
+    color: #b3392e;
+    text-decoration: line-through;
+    border-radius: 2px;
+    padding: 1px 3px;
+  }
+  .diff-added {
+    background: #2f6f4724;
+    color: #2f6f47;
+    border-radius: 2px;
+    padding: 1px 3px;
+  }
+  .demo-modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+  }
+  .demo-modal-cancel {
+    font:
+      700 12px "JetBrains Mono",
+      monospace;
+    background: transparent;
+    color: #b3392e;
+    border: 1px solid #b3392e;
+    border-radius: 2px;
+    padding: 10px 16px;
+    cursor: pointer;
+  }
+  .demo-modal-accept {
+    font:
+      700 13px "JetBrains Mono",
+      monospace;
+    letter-spacing: 0.04em;
+    background: #20180f;
+    color: #f6efd8;
+    border: none;
+    border-radius: 3px;
+    padding: 13px 22px;
+    cursor: pointer;
+  }
 
-	.section-label-row {
-		margin-bottom: 20px;
-	}
-	.section-label {
-		font:
-			700 12px "JetBrains Mono",
-			monospace;
-		letter-spacing: 0.1em;
-		text-transform: uppercase;
-		color: #8a7f63;
-	}
+  .section-label-row {
+    margin-bottom: 20px;
+  }
+  .section-label {
+    font:
+      700 12px "JetBrains Mono",
+      monospace;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #8a7f63;
+  }
 
-	.steps-grid {
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		gap: 32px;
-		margin-bottom: 80px;
-	}
-	.step {
-		border-left: 2px solid #b3392e;
-		padding-left: 16px;
-	}
-	.step-number {
-		font:
-			700 26px "JetBrains Mono",
-			monospace;
-		color: #20180f;
-		margin-bottom: 8px;
-	}
-	.step-title {
-		font:
-			700 14px "JetBrains Mono",
-			monospace;
-		margin-bottom: 6px;
-	}
-	.step-desc {
-		font:
-			400 13px / 1.6 "JetBrains Mono",
-			monospace;
-		color: #4a4030;
-	}
+  .steps-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    margin-bottom: 80px;
+  }
+  .step {
+    border-left: 2px solid #b3392e;
+    padding-left: 16px;
+  }
+  .step-number {
+    font:
+      700 26px "JetBrains Mono",
+      monospace;
+    color: #20180f;
+    margin-bottom: 8px;
+  }
+  .step-title {
+    font:
+      700 14px "JetBrains Mono",
+      monospace;
+    margin-bottom: 6px;
+  }
+  .step-desc {
+    font:
+      400 13px / 1.6 "JetBrains Mono",
+      monospace;
+    color: #4a4030;
+  }
 
-	.faq-section {
-		margin-bottom: 72px;
-	}
-	.faq-item {
-		border-top: 1px solid #20180f22;
-		padding: 18px 0;
-	}
-	.faq-question {
-		display: flex;
-		align-items: baseline;
-		gap: 14px;
-		cursor: pointer;
-	}
-	.faq-marker {
-		font:
-			700 13px "JetBrains Mono",
-			monospace;
-		color: #b3392e;
-		flex: none;
-	}
-	.faq-question-text {
-		font:
-			700 15px "JetBrains Mono",
-			monospace;
-		color: #20180f;
-	}
-	.faq-answer {
-		display: none;
-		font:
-			400 13px / 1.7 "JetBrains Mono",
-			monospace;
-		color: #4a4030;
-		margin: 10px 0 0 27px;
-		max-width: 560px;
-	}
-	.faq-item.is-open .faq-answer {
-		display: block;
-	}
+  .faq-section {
+    margin-bottom: 72px;
+  }
+  .faq-item {
+    border-top: 1px solid #20180f22;
+    padding: 18px 0;
+  }
+  .faq-question {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    cursor: pointer;
+  }
+  .faq-marker {
+    font:
+      700 13px "JetBrains Mono",
+      monospace;
+    color: #b3392e;
+    flex: none;
+  }
+  .faq-question-text {
+    font:
+      700 15px "JetBrains Mono",
+      monospace;
+    color: #20180f;
+  }
+  .faq-answer {
+    display: none;
+    font:
+      400 13px / 1.7 "JetBrains Mono",
+      monospace;
+    color: #4a4030;
+    margin: 10px 0 0 27px;
+    max-width: 560px;
+  }
+  .faq-item.is-open .faq-answer {
+    display: block;
+  }
 
-	.footer {
-		max-width: 80rem;
-		margin: 0 auto;
-		padding: 28px 28px 44px;
-		border-top: 1px solid #20180f22;
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		flex-wrap: wrap;
-		gap: 10px;
-	}
-	.footer-copyright,
-	.footer-tagline {
-		font:
-			400 12px "JetBrains Mono",
-			monospace;
-		color: #8a7f63;
-	}
+  .footer {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 28px 28px 44px;
+    border-top: 1px solid #20180f22;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .footer-copyright,
+  .footer-tagline {
+    font:
+      400 12px "JetBrains Mono",
+      monospace;
+    color: #8a7f63;
+  }
 
-	:global(.diff-removed) {
-		background: rgb(255, 56, 60, 0.15);
-		padding: 0 3px;
-	}
+  :global(.diff-removed) {
+    background: rgb(255, 56, 60, 0.15);
+    padding: 0 3px;
+  }
 
-	:global(.diff-added) {
-		background: rgb(52, 199, 89, 0.15);
-		padding: 0 3px;
-	}
+  :global(.diff-added) {
+    background: rgb(52, 199, 89, 0.15);
+    padding: 0 3px;
+  }
 
-	@media (max-width: 640px) {
-		.erratly-steps {
-			grid-template-columns: 1fr !important;
-			gap: 24px !important;
-		}
-		.erratly-header {
-			padding: 24px 20px 0 !important;
-		}
-		.erratly-main {
-			padding: 44px 20px 0 !important;
-		}
-		.erratly-footer {
-			padding: 24px 20px 36px !important;
-			flex-direction: column;
-			align-items: flex-start !important;
-		}
-		.erratly-try-inner {
-			padding: 26px 20px 22px !important;
-		}
-		.erratly-demo-text {
-			font-size: 17px !important;
-		}
-	}
+  @media (max-width: 640px) {
+    .erratly-steps {
+      grid-template-columns: 1fr !important;
+      gap: 24px !important;
+    }
+    .erratly-header {
+      padding: 24px 20px 0 !important;
+    }
+    .erratly-main {
+      padding: 44px 20px 0 !important;
+    }
+    .erratly-footer {
+      padding: 24px 20px 36px !important;
+      flex-direction: column;
+      align-items: flex-start !important;
+    }
+    .erratly-try-inner {
+      padding: 26px 20px 22px !important;
+    }
+    .erratly-demo-text {
+      font-size: 17px !important;
+    }
+  }
 </style>
