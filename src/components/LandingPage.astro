@@ -199,7 +199,15 @@ const locales = ["en", "fr"];
       </main>
 
       <footer class="erratly-footer footer">
-        <span class="footer-copyright">{t.footerCopyright} - Lucas Audart</span>
+        <span class="footer-copyright">
+          {t.footerCopyright} - <a
+            href="https://slocaly.dev"
+            target="_blank"
+            class="footer-link"
+          >
+            Lucas Audart
+          </a>
+        </span>
       </footer>
       <div class="diff-added"></div>
       <div class="diff-removed"></div>
@@ -225,6 +233,11 @@ const locales = ["en", "fr"];
   }
   :global(a) {
     color: inherit;
+  }
+
+  .footer-link {
+    color: inherit;
+    text-decoration: none;
   }
 
   .page {
