@@ -86,6 +86,13 @@ const locales = ["en", "fr"];
           </div>
         </div>
 
+        <p class="blocked-note">
+          {t.blockedNoteText}{" "}
+          <a href={getRelativeLocaleUrl(lang, "/install")} class="blocked-note-link">
+            {t.blockedNoteLink}
+          </a>
+        </p>
+
         <section id="try" class="try-section">
           <span class="try-badge">{t.tryBadge}</span>
           <span class="try-clip"></span>
@@ -191,7 +198,17 @@ const locales = ["en", "fr"];
                   </span>
                   <span class="faq-question-text">{item.q}</span>
                 </div>
-                <div class="faq-answer">{item.a}</div>
+                <div class="faq-answer">
+                  {item.a}
+                  {item.link && (
+                    <>
+                      {" "}
+                      <a href={item.link.href} class="faq-link">
+                        {item.link.text}
+                      </a>
+                    </>
+                  )}
+                </div>
               </div>
             ))
           }
@@ -414,7 +431,22 @@ const locales = ["en", "fr"];
     align-items: center;
     gap: 18px;
     flex-wrap: wrap;
-    margin-bottom: 64px;
+    margin-bottom: 12px;
+  }
+  .blocked-note {
+    font:
+      400 12px "JetBrains Mono",
+      monospace;
+    color: #8a7f63;
+    margin: 0 0 64px;
+  }
+  .blocked-note-link {
+    color: #b3392e;
+    font-weight: 700;
+    text-decoration: none;
+  }
+  .blocked-note-link:hover {
+    text-decoration: underline;
   }
   .btn-primary {
     text-decoration: none;
@@ -731,6 +763,14 @@ const locales = ["en", "fr"];
   }
   .faq-item.is-open .faq-answer {
     display: block;
+  }
+  .faq-link {
+    color: #b3392e;
+    font-weight: 700;
+    text-decoration: none;
+  }
+  .faq-link:hover {
+    text-decoration: underline;
   }
 
   .footer {

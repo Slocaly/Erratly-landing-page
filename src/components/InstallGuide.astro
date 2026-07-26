@@ -1,0 +1,287 @@
+---
+import { getRelativeLocaleUrl } from "astro:i18n";
+import install from "../data/install.json";
+import strings from "../data/strings.json";
+
+interface Props {
+  lang: "en" | "fr";
+}
+
+const { lang } = Astro.props;
+const t = install[lang];
+const s = strings[lang];
+const locales = ["en", "fr"];
+---
+
+<html lang={lang}>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/png" href="/Erratly_icon_round.png" />
+    <link rel="icon" href="/Erratly_icon_round.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{t.title} — Erratly</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="page">
+      <header class="header">
+        <a href={getRelativeLocaleUrl(lang, "/")} class="brand">
+          <img src="/Erratly_icon_round.png" alt="Erratly" class="brand-icon" />
+          <span class="brand-name">Erratly</span>
+        </a>
+        <div class="lang-switch">
+          {
+            locales.map((locale) =>
+              locale === lang ? (
+                <span class="lang-btn is-active">{locale.toUpperCase()}</span>
+              ) : (
+                <a
+                  class="lang-btn"
+                  href={getRelativeLocaleUrl(locale, "/install")}
+                >
+                  {locale.toUpperCase()}
+                </a>
+              ),
+            )
+          }
+        </div>
+      </header>
+
+      <main class="main">
+        <h1 class="title">{t.title}</h1>
+        <p class="intro">{t.intro}</p>
+
+        <ol class="steps-list">
+          {
+            t.steps.map((step, i) => (
+              <li class="step">
+                <div class="step-number">{String(i + 1).padStart(2, "0")}</div>
+                <div class="step-body">
+                  <div class="step-title">{step.title}</div>
+                  <div class="step-desc">{step.desc}</div>
+                  <img
+                    src={step.screen}
+                    alt={step.title}
+                    class="step-screenshot"
+                  />
+                </div>
+              </li>
+            ))
+          }
+        </ol>
+
+        <a href={getRelativeLocaleUrl(lang, "/")} class="back-link">
+          {t.backLink}
+        </a>
+      </main>
+
+      <footer class="footer">
+        <span class="footer-copyright">
+          {s.footerCopyright} - <a
+            href="https://slocaly.dev"
+            target="_blank"
+            class="footer-link"
+          >
+            Lucas Audart
+          </a>
+        </span>
+      </footer>
+    </div>
+  </body>
+</html>
+
+<style>
+  :global(html, body) {
+    margin: 0;
+    background: #f6efd8;
+    font-family: "JetBrains Mono", monospace;
+    color: #20180f;
+  }
+  :global(*) {
+    box-sizing: border-box;
+  }
+  :global(a) {
+    color: inherit;
+  }
+
+  .page {
+    background: #f6efd8;
+    min-height: 100vh;
+  }
+
+  .header {
+    max-width: 80rem;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 34px 28px 0;
+  }
+  .brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    text-decoration: none;
+    color: inherit;
+  }
+  .brand-icon {
+    width: 28px;
+    height: 28px;
+    border-radius: 7px;
+    display: block;
+  }
+  .brand-name {
+    font:
+      700 15px "JetBrains Mono",
+      monospace;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  .lang-switch {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    background: #20180f;
+    border-radius: 3px;
+    padding: 3px;
+  }
+  .lang-btn {
+    border: none;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    font:
+      700 11px "JetBrains Mono",
+      monospace;
+    letter-spacing: 0.05em;
+    padding: 5px 9px;
+    border-radius: 2px;
+    background: transparent;
+    color: #f6efd8;
+  }
+  .lang-btn.is-active {
+    background: #f6efd8;
+    color: #20180f;
+  }
+
+  .main {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 48px 28px 80px;
+  }
+
+  .title {
+    font:
+      700 clamp(28px, 4.5vw, 40px) / 1.2 "JetBrains Mono",
+      monospace;
+    margin: 0 0 16px;
+  }
+
+  .intro {
+    font:
+      400 15px / 1.7 "JetBrains Mono",
+      monospace;
+    color: #4a4030;
+    max-width: 520px;
+    margin: 0 0 48px;
+  }
+
+  .steps-list {
+    list-style: none;
+    margin: 0 0 48px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  .step {
+    display: flex;
+    gap: 20px;
+    border-left: 2px solid #b3392e;
+    padding-left: 20px;
+  }
+  .step-number {
+    font:
+      700 26px "JetBrains Mono",
+      monospace;
+    color: #8a7f63;
+    flex: none;
+  }
+  .step-title {
+    font:
+      700 16px "JetBrains Mono",
+      monospace;
+    margin-bottom: 6px;
+  }
+  .step-desc {
+    font:
+      400 14px / 1.6 "JetBrains Mono",
+      monospace;
+    color: #4a4030;
+    max-width: 480px;
+  }
+  .screenshot-wrap {
+    position: relative;
+    display: inline-block;
+  }
+  .step-screenshot {
+    margin-top: 16px;
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .back-link {
+    display: inline-block;
+    font:
+      700 13px "JetBrains Mono",
+      monospace;
+    letter-spacing: 0.04em;
+    text-decoration: none;
+    color: #20180f;
+  }
+
+  .footer {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 28px 28px 44px;
+    border-top: 1px solid #20180f22;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .footer-copyright {
+    font:
+      400 12px "JetBrains Mono",
+      monospace;
+    color: #8a7f63;
+  }
+  .footer-link {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  @media (max-width: 640px) {
+    .header {
+      padding: 24px 20px 0;
+    }
+    .main {
+      padding: 36px 20px 60px;
+    }
+    .step {
+      gap: 14px;
+    }
+    .footer {
+      padding: 24px 20px 36px;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+</style>

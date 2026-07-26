@@ -26,7 +26,9 @@
 		"step3Desc": "Corrected in place, instantly. Keep typing.",
 		"footerCopyright": "© 2026 Erratly",
 		"footerTagline": "built for people who type fast and fix slower",
-		"faqLabel": "FAQ"
+		"faqLabel": "FAQ",
+		"blockedNoteText": "Mac blocking the app?",
+		"blockedNoteLink": "See how to open it →"
 	},
 	"fr": {
 		"tagline": "pour Mac",
@@ -55,6 +57,8 @@
 		"step3Desc": "Corrigé sur place, aussitôt. Continuez à écrire.",
 		"footerCopyright": "© 2026 Erratly",
 		"footerTagline": "pensé pour ceux qui tapent vite et corrigent lentement",
-		"faqLabel": "FAQ"
+		"faqLabel": "FAQ",
+		"blockedNoteText": "Le Mac bloque l'appli ?",
+		"blockedNoteLink": "Voir comment l'ouvrir →"
 	}
 }

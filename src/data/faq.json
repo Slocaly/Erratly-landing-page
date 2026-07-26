@@ -15,6 +15,11 @@
     {
       "q": "Does it work in languages other than English?",
       "a": "Yes — Many languages are supported."
+    },
+    {
+      "q": "macOS says it can't verify the developer — what do I do?",
+      "a": "Erratly isn't notarized by Apple yet, so macOS shows this warning on first launch. It's safe to open.",
+      "link": { "href": "/install", "text": "See how to open it →" }
     }
   ],
   "fr": [
@@ -33,6 +38,11 @@
     {
       "q": "Ça marche dans d’autres langues que l’anglais ?",
       "a": "Oui — de nombreuses langues sont prises en charge."
+    },
+    {
+      "q": "macOS dit qu'il ne peut pas vérifier le développeur — que faire ?",
+      "a": "Erratly n'est pas encore notarié par Apple, donc macOS affiche cet avertissement au premier lancement. Vous pouvez l'ouvrir sans risque.",
+      "link": { "href": "/fr/install", "text": "Voir comment l'ouvrir →" }
     }
   ]
 }

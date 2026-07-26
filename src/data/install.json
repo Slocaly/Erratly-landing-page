@@ -1,0 +1,56 @@
+{
+  "en": {
+    "title": "How to open Erratly",
+    "intro": "Since Erratly isn't notarized by Apple yet, macOS shows a warning the first time you open it. This doesn't mean anything is wrong — it just means Apple hasn't reviewed the app. Here's how to open it anyway.",
+    "steps": [
+      {
+        "title": "Dismiss the warning",
+        "desc": "When the “Erratly” can't be opened dialog appears, click Done (not Move to Trash).",
+        "screen": "/step_1.png"
+      },
+      {
+        "title": "Open Privacy & Security settings",
+        "desc": "Go to the Apple menu → System Settings → Privacy & Security.",
+        "screen": "/step_2.png"
+      },
+      {
+        "title": "Find the \"Open Anyway\" button",
+        "desc": "Scroll down to the Security section. You'll see a message about Erratly being blocked, with an Open Anyway button next to it — click it.",
+        "screen": "/step_3.png"
+      },
+      {
+        "title": "Confirm",
+        "desc": "Click Open Anyway again in the dialog that appears, then enter your Mac password or use Touch ID to confirm.",
+        "screen": "/step_4.png"
+      }
+    ],
+    "backLink": "← Back to Erratly"
+  },
+  "fr": {
+    "title": "Comment ouvrir Erratly",
+    "intro": "Erratly n'étant pas encore notarié par Apple, macOS affiche un avertissement la première fois que vous l'ouvrez. Cela ne veut pas dire qu'il y a un problème — seulement qu'Apple n'a pas encore vérifié l'application. Voici comment l'ouvrir quand même.",
+    "steps": [
+      {
+        "title": "Fermer l'avertissement",
+        "desc": "Quand la fenêtre « Erratly » non ouvert apparaît, cliquez sur Terminé (pas sur Placer dans la corbeille).",
+        "screen": "/step_1.png"
+      },
+      {
+        "title": "Ouvrir Confidentialité et sécurité",
+        "desc": "Allez dans le menu Pomme → Réglages Système → Confidentialité et sécurité.",
+        "screen": "/step_2.png"
+      },
+      {
+        "title": "Trouver le bouton « Ouvrir quand même »",
+        "desc": "Faites défiler jusqu'à la section Sécurité. Vous verrez un message indiquant qu'Erratly a été bloqué, avec un bouton Ouvrir quand même à côté — cliquez dessus.",
+        "screen": "/step_3.png"
+      },
+      {
+        "title": "Confirmer",
+        "desc": "Cliquez à nouveau sur Ouvrir quand même dans la fenêtre qui apparaît, puis entrez votre mot de passe Mac ou utilisez Touch ID pour confirmer.",
+        "screen": "/step_4.png"
+      }
+    ],
+    "backLink": "← Retour à Erratly"
+  }
+}
