@@ -25,6 +25,28 @@ const locales = ["en", "fr"];
       name="description"
       content="Select any misspelled text, in any app, anywhere on your Mac. Double-press Ctrl. Erratly corrects it on the spot."
     />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Erratly — Fix typos instantly, anywhere on your Mac"
+    />
+    <meta
+      property="og:description"
+      content="Select any misspelled text, in any app, anywhere on your Mac. Double-press Ctrl. Erratly corrects it on the spot."
+    />
+    <meta property="og:image" content="/Erratly_icon_round.png" />
+    <meta property="og:image:width" content="770" />
+    <meta property="og:image:height" content="770" />
+    <meta name="twitter:card" content="summary" />
+    <meta
+      name="twitter:title"
+      content="Erratly — Fix typos instantly, anywhere on your Mac"
+    />
+    <meta
+      name="twitter:description"
+      content="Select any misspelled text, in any app, anywhere on your Mac. Double-press Ctrl. Erratly corrects it on the spot."
+    />
+    <meta name="twitter:image" content="/Erratly_icon_round.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap"
@@ -32,6 +54,7 @@ const locales = ["en", "fr"];
     />
   </head>
   <body>
+    <a href="#main-content" class="skip-link">Skip to content</a>
     <div class="page">
       <header class="erratly-header header">
         <span class="brand">
@@ -55,7 +78,7 @@ const locales = ["en", "fr"];
         </div>
       </header>
 
-      <main class="erratly-main main">
+      <main class="erratly-main main" id="main-content">
         <h1 class="hero-title">
           {t.struck}{" "}
           <span class="struck">
@@ -254,6 +277,29 @@ const locales = ["en", "fr"];
   :global(a) {
     color: inherit;
   }
+  :global(*:focus-visible) {
+    outline: 2px solid #b3392e;
+    outline-offset: 2px;
+  }
+
+  .skip-link {
+    position: absolute;
+    left: 12px;
+    top: -48px;
+    background: #20180f;
+    color: #f6efd8;
+    padding: 10px 16px;
+    border-radius: 3px;
+    font:
+      700 12px "JetBrains Mono",
+      monospace;
+    text-decoration: none;
+    z-index: 100;
+    transition: top 0.2s ease;
+  }
+  .skip-link:focus {
+    top: 12px;
+  }
 
   .footer-link {
     color: inherit;
@@ -300,12 +346,6 @@ const locales = ["en", "fr"];
     display: flex;
     align-items: center;
     gap: 14px;
-  }
-  .tagline {
-    font:
-      400 12px "JetBrains Mono",
-      monospace;
-    color: #8a7f63;
   }
   .lang-switch {
     display: flex;
@@ -462,48 +502,6 @@ const locales = ["en", "fr"];
     border-radius: 3px;
     padding: 13px 22px;
   }
-  .steps-cta {
-    margin: 0 0 28px;
-  }
-  .btn-secondary {
-    display: inline-block;
-    text-decoration: none;
-    font:
-      700 13px "JetBrains Mono",
-      monospace;
-    letter-spacing: 0.04em;
-    background: transparent;
-    color: #20180f;
-    border: 1.5px solid #20180f;
-    border-radius: 3px;
-    padding: 11.5px 20.5px;
-  }
-  .btn-secondary:hover {
-    background: #20180f;
-    color: #f6efd8;
-  }
-  .shortcut-pill {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    background: #20180f;
-    color: #f6efd8;
-    border-radius: 3px;
-    padding: 9px 14px;
-    font:
-      700 15px "JetBrains Mono",
-      monospace;
-  }
-  .shortcut-plus {
-    opacity: 0.5;
-  }
-  .shortcut-label {
-    font-weight: 400;
-    opacity: 0.7;
-    margin-left: 10px;
-    font-size: 12px;
-  }
-
   .try-section {
     border: 2px solid #20180f;
     border-radius: 3px;
