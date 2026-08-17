@@ -1,0 +1,90 @@
+{
+  "en": {
+    "title": "How Erratly works",
+    "intro": "Erratly is a tiny menu bar app — no windows, no dashboard. Here's what to expect from first launch to everyday use, including the one-time model download.",
+    "requirements": {
+      "label": "Requirements",
+      "items": [
+        "macOS 26 or later",
+        "Apple Silicon (M1 or newer)",
+        "~2 GB of free disk space, for the model"
+      ]
+    },
+    "steps": [
+      {
+        "title": "Download & launch",
+        "desc": "Move Erratly.app to your Applications folder and open it. A small ✦ icon appears in your menu bar — that's the whole app.",
+        "screen": "/install.png"
+      },
+      {
+        "title": "First launch downloads the model",
+        "desc": "Erratly needs a small language model to run corrections. On first launch, it downloads it automatically from Hugging Face (~1.8 GB). The menu bar icon shows ⏳ while this happens — it can take a few minutes depending on your connection.",
+        "screen": "/hourglass.png"
+      },
+      {
+        "title": "Grant Accessibility permission",
+        "desc": "macOS will ask for Accessibility access. This is what lets Erratly read the text you select and replace it in place, in any app. Grant it in System Settings when prompted.",
+        "screen": "/accessibility.png"
+      },
+      {
+        "title": "Ready to use",
+        "desc": "Once the icon shows ✦, Erratly is ready. The model is cached on your Mac, so this download only happens once — no internet connection needed after that.",
+        "screen": "/ready.png"
+      },
+      {
+        "title": "Fix text anywhere",
+        "desc": "Select any misspelled text, double-tap Control, and Erratly corrects it in place. The icon briefly shows ⟳ while it's working, then goes back to ✦.",
+        "screen": "/erratly.gif"
+      },
+      {
+        "title": "Everything runs locally",
+        "desc": "Corrections run entirely on your Mac using the downloaded model — your text is never sent anywhere."
+      }
+    ],
+    "backLink": "← Back to Erratly"
+  },
+  "fr": {
+    "title": "Comment fonctionne Erratly",
+    "intro": "Erratly est une petite appli de barre de menus — pas de fenêtre, pas de tableau de bord. Voici à quoi s'attendre, du premier lancement à l'usage quotidien, y compris le téléchargement du modèle (une seule fois).",
+    "requirements": {
+      "label": "Prérequis",
+      "items": [
+        "macOS 26 ou version ultérieure",
+        "Apple Silicon (M1 ou plus récent)",
+        "~2 Go d'espace disque libre, pour le modèle"
+      ]
+    },
+    "steps": [
+      {
+        "title": "Télécharger et lancer",
+        "desc": "Placez Erratly.app dans votre dossier Applications et ouvrez-le. Une petite icône ✦ apparaît dans votre barre de menus — c'est toute l'appli.",
+        "screen": "/install.png"
+      },
+      {
+        "title": "Le premier lancement télécharge le modèle",
+        "desc": "Erratly a besoin d'un petit modèle de langage pour corriger le texte. Au premier lancement, il le télécharge automatiquement depuis Hugging Face (~1,8 Go). L'icône de la barre de menus affiche ⏳ pendant ce temps — cela peut prendre quelques minutes selon votre connexion.",
+        "screen": "/hourglass.png"
+      },
+      {
+        "title": "Accorder l'accès à l'accessibilité",
+        "desc": "macOS va demander l'accès à l'accessibilité. C'est ce qui permet à Erratly de lire le texte sélectionné et de le remplacer sur place, dans n'importe quelle appli. Accordez-le dans Réglages Système quand on vous le demande.",
+        "screen": "/accessibility.png"
+      },
+      {
+        "title": "Prêt à l'emploi",
+        "desc": "Une fois que l'icône affiche ✦, Erratly est prêt. Le modèle est mis en cache sur votre Mac, donc ce téléchargement n'a lieu qu'une seule fois — aucune connexion internet n'est nécessaire ensuite.",
+        "screen": "/ready.png"
+      },
+      {
+        "title": "Corriger du texte n'importe où",
+        "desc": "Sélectionnez un texte mal orthographié, double-appuyez sur Ctrl, et Erratly le corrige sur place. L'icône affiche brièvement ⟳ pendant le traitement, puis revient à ✦.",
+        "screen": "/erratly.gif"
+      },
+      {
+        "title": "Tout se passe en local",
+        "desc": "Les corrections se font entièrement sur votre Mac grâce au modèle téléchargé — votre texte n'est jamais envoyé nulle part."
+      }
+    ],
+    "backLink": "← Retour à Erratly"
+  }
+}

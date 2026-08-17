@@ -20,6 +20,11 @@
       "q": "macOS says it can't verify the developer — what do I do?",
       "a": "Erratly isn't notarized by Apple yet, so macOS shows this warning on first launch. It's safe to open.",
       "link": { "href": "/install", "text": "See how to open it →" }
+    },
+    {
+      "q": "Does Erratly need to download anything before I can use it?",
+      "a": "Yes — on first launch, Erratly downloads its language model (~1.8 GB) once. After that it works fully offline.",
+      "link": { "href": "/how-it-works", "text": "See what to expect →" }
     }
   ],
   "fr": [
@@ -43,6 +48,11 @@
       "q": "macOS dit qu'il ne peut pas vérifier le développeur — que faire ?",
       "a": "Erratly n'est pas encore notarié par Apple, donc macOS affiche cet avertissement au premier lancement. Vous pouvez l'ouvrir sans risque.",
       "link": { "href": "/fr/install", "text": "Voir comment l'ouvrir →" }
+    },
+    {
+      "q": "Erratly doit-il télécharger quelque chose avant de pouvoir être utilisé ?",
+      "a": "Oui — au premier lancement, Erratly télécharge son modèle de langage (~1,8 Go), une seule fois. Ensuite, il fonctionne entièrement hors ligne.",
+      "link": { "href": "/fr/how-it-works", "text": "Voir à quoi s'attendre →" }
     }
   ]
 }

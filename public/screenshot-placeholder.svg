@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540">
+  <rect width="960" height="540" fill="#f6efd8" />
+  <rect x="8" y="8" width="944" height="524" rx="10" fill="none" stroke="#20180f" stroke-opacity="0.25" stroke-width="2" stroke-dasharray="10 8" />
+  <text x="480" y="258" font-family="monospace" font-size="22" font-weight="700" fill="#20180f" fill-opacity="0.55" text-anchor="middle">Erratly</text>
+  <text x="480" y="292" font-family="monospace" font-size="16" fill="#20180f" fill-opacity="0.4" text-anchor="middle">Screenshot coming soon</text>
+</svg>

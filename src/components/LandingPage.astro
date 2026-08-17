@@ -80,15 +80,18 @@ const locales = ["en", "fr"];
             href="https://github.com/Slocaly/Erratly/releases/latest/download/Erratly.dmg"
             class="btn-primary">{t.ctaDownload}</a
           >
-          <div class="shortcut-pill">
-            &#8963;<span class="shortcut-plus">&nbsp;+&nbsp;</span>&#8963;
-            <span class="shortcut-label">{t.shortcutLabel}</span>
-          </div>
+          <a
+            href={getRelativeLocaleUrl(lang, "/how-it-works")}
+            class="btn-primary">{t.howItWorksLinkLabel}</a
+          >
         </div>
 
         <p class="blocked-note">
           {t.blockedNoteText}{" "}
-          <a href={getRelativeLocaleUrl(lang, "/install")} class="blocked-note-link">
+          <a
+            href={getRelativeLocaleUrl(lang, "/install")}
+            class="blocked-note-link"
+          >
             {t.blockedNoteLink}
           </a>
         </p>
@@ -458,6 +461,26 @@ const locales = ["en", "fr"];
     color: #f6efd8;
     border-radius: 3px;
     padding: 13px 22px;
+  }
+  .steps-cta {
+    margin: 0 0 28px;
+  }
+  .btn-secondary {
+    display: inline-block;
+    text-decoration: none;
+    font:
+      700 13px "JetBrains Mono",
+      monospace;
+    letter-spacing: 0.04em;
+    background: transparent;
+    color: #20180f;
+    border: 1.5px solid #20180f;
+    border-radius: 3px;
+    padding: 11.5px 20.5px;
+  }
+  .btn-secondary:hover {
+    background: #20180f;
+    color: #f6efd8;
   }
   .shortcut-pill {
     display: inline-flex;
