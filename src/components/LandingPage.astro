@@ -2,6 +2,7 @@
 import { getRelativeLocaleUrl } from "astro:i18n";
 import strings from "../data/strings.json";
 import faq from "../data/faq.json";
+import features from "../data/features.json";
 
 interface Props {
   lang: "en" | "fr";
@@ -10,6 +11,7 @@ interface Props {
 const { lang } = Astro.props;
 const t = strings[lang];
 const faqItems = faq[lang];
+const featureItems = features[lang];
 const locales = ["en", "fr"];
 ---
 
@@ -208,6 +210,22 @@ const locales = ["en", "fr"];
             <div class="step-title">{t.step3Title}</div>
             <div class="step-desc">{t.step3Desc}</div>
           </div>
+        </div>
+
+        <div class="section-label-row">
+          <span class="section-label">{t.featuresLabel}</span>
+        </div>
+
+        <div class="erratly-features features-grid">
+          {
+            featureItems.map((item) => (
+              <div class="feature-card">
+                <span class="feature-marker" />
+                <div class="feature-title">{item.title}</div>
+                <div class="feature-desc">{item.desc}</div>
+              </div>
+            ))
+          }
         </div>
 
         <div class="section-label-row">
@@ -747,6 +765,37 @@ const locales = ["en", "fr"];
     color: #4a4030;
   }
 
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    margin-bottom: 80px;
+  }
+  .feature-card {
+    border-left: 2px solid #20180f;
+    padding-left: 16px;
+  }
+  .feature-marker {
+    display: block;
+    width: 10px;
+    height: 10px;
+    background: #b3392e;
+    border-radius: 2px;
+    margin-bottom: 12px;
+  }
+  .feature-title {
+    font:
+      700 14px "JetBrains Mono",
+      monospace;
+    margin-bottom: 6px;
+  }
+  .feature-desc {
+    font:
+      400 13px / 1.6 "JetBrains Mono",
+      monospace;
+    color: #4a4030;
+  }
+
   .faq-section {
     margin-bottom: 72px;
   }
@@ -824,7 +873,8 @@ const locales = ["en", "fr"];
   }
 
   @media (max-width: 640px) {
-    .erratly-steps {
+    .erratly-steps,
+    .erratly-features {
       grid-template-columns: 1fr !important;
       gap: 24px !important;
     }

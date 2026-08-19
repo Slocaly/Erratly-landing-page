@@ -1,0 +1,54 @@
+{
+  "en": [
+    {
+      "title": "Works everywhere",
+      "desc": "Any app, any text field, system-wide."
+    },
+    {
+      "title": "100% on-device",
+      "desc": "Text never leaves your Mac. Fully offline after first launch."
+    },
+    {
+      "title": "One shortcut",
+      "desc": "Double-tap Ctrl. No menus, no mouse."
+    },
+    {
+      "title": "You're in control",
+      "desc": "Review and accept or reject every correction."
+    },
+    {
+      "title": "Multilingual",
+      "desc": "Supports many languages, not just English."
+    },
+    {
+      "title": "Review correction or instant, your choice",
+      "desc": "Confirm each fix, or let Erratly apply corrections automatically."
+    }
+  ],
+  "fr": [
+    {
+      "title": "Partout à la fois",
+      "desc": "N'importe quelle appli, n'importe quel champ, sur tout le système."
+    },
+    {
+      "title": "100 % sur l'appareil",
+      "desc": "Votre texte ne quitte jamais votre Mac. Hors ligne après le premier lancement."
+    },
+    {
+      "title": "Un seul raccourci",
+      "desc": "Double-appui sur Ctrl. Pas de menu, pas de souris."
+    },
+    {
+      "title": "Vous gardez le contrôle",
+      "desc": "Confirmez ou refusez chaque correction."
+    },
+    {
+      "title": "Multilingue",
+      "desc": "Prend en charge de nombreuses langues, pas seulement l'anglais."
+    },
+    {
+      "title": "Correction validée ou instantanée, à vous de choisir",
+      "desc": "Confirmez chaque correction, ou laissez Erratly les appliquer automatiquement."
+    }
+  ]
+}
