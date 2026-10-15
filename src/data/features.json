@@ -5,16 +5,16 @@
       "desc": "Any app, any text field, system-wide."
     },
     {
-      "title": "100% on-device",
+      "title": "On-device by default",
       "desc": "Text never leaves your Mac. Fully offline after first launch."
     },
     {
-      "title": "One shortcut",
-      "desc": "Double-tap Ctrl. No menus, no mouse."
+      "title": "Your shortcut",
+      "desc": "Double-tap Ctrl by default, or record any key combo you prefer."
     },
     {
       "title": "You're in control",
-      "desc": "Review and accept or reject every correction."
+      "desc": "Review every correction, and drop any single change you don't want."
     },
     {
       "title": "Multilingual",
@@ -23,6 +23,18 @@
     {
       "title": "Review correction or instant, your choice",
       "desc": "Confirm each fix, or let Erratly apply corrections automatically."
+    },
+    {
+      "title": "Bring your own model",
+      "desc": "Prefer the cloud? Plug in OpenAI or any OpenAI-compatible API with your own key, safely stored in the Keychain."
+    },
+    {
+      "title": "Sized to fit",
+      "desc": "Pick a small, medium or large review panel."
+    },
+    {
+      "title": "Lives in your menu bar",
+      "desc": "A tiny ✦ icon. Settings are one click away."
     }
   ],
   "fr": [
@@ -31,16 +43,16 @@
       "desc": "N'importe quelle appli, n'importe quel champ, sur tout le système."
     },
     {
-      "title": "100 % sur l'appareil",
+      "title": "Sur l'appareil par défaut",
       "desc": "Votre texte ne quitte jamais votre Mac. Hors ligne après le premier lancement."
     },
     {
-      "title": "Un seul raccourci",
-      "desc": "Double-appui sur Ctrl. Pas de menu, pas de souris."
+      "title": "Votre raccourci",
+      "desc": "Double-appui sur Ctrl par défaut, ou enregistrez la combinaison de touches de votre choix."
     },
     {
       "title": "Vous gardez le contrôle",
-      "desc": "Confirmez ou refusez chaque correction."
+      "desc": "Vérifiez chaque correction, et retirez celles que vous ne voulez pas."
     },
     {
       "title": "Multilingue",
@@ -49,6 +61,18 @@
     {
       "title": "Correction validée ou instantanée, à vous de choisir",
       "desc": "Confirmez chaque correction, ou laissez Erratly les appliquer automatiquement."
+    },
+    {
+      "title": "Votre propre modèle",
+      "desc": "Vous préférez le cloud ? Branchez OpenAI ou toute API compatible OpenAI avec votre propre clé, stockée en sécurité dans le Trousseau."
+    },
+    {
+      "title": "À la bonne taille",
+      "desc": "Choisissez un panneau de révision petit, moyen ou grand."
+    },
+    {
+      "title": "Dans votre barre de menus",
+      "desc": "Une petite icône ✦. Les réglages sont à un clic."
     }
   ]
 }

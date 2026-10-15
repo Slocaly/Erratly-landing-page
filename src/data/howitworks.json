@@ -1,7 +1,7 @@
 {
   "en": {
     "title": "How Erratly works",
-    "intro": "Erratly is a tiny menu bar app — no windows, no dashboard. Here's what to expect from first launch to everyday use, including the one-time model download.",
+    "intro": "Erratly is a tiny menu bar app — no dashboard, just a compact Settings window. Here's what to expect from first launch to everyday use, including the one-time model download.",
     "requirements": {
       "label": "Requirements",
       "items": [
@@ -33,19 +33,23 @@
       },
       {
         "title": "Fix text anywhere",
-        "desc": "Select any misspelled text, double-tap Control, and Erratly corrects it in place. The icon briefly shows ⟳ while it's working, then goes back to ✦.",
+        "desc": "Select any misspelled text, double-tap Control (or your own shortcut), and Erratly corrects it in place. The icon briefly shows ⟳ while it's working, then goes back to ✦.",
         "screen": "/erratly.gif"
       },
       {
-        "title": "Everything runs locally",
-        "desc": "Corrections run entirely on your Mac using the downloaded model — your text is never sent anywhere."
+        "title": "Local by default, remote if you want",
+        "desc": "Corrections run entirely on your Mac using the downloaded model — your text is never sent anywhere. If you'd rather use a cloud model, open Settings… from the menu bar, choose Remote API and enter an OpenAI-compatible base URL, model name and API key (stored in the Keychain)."
+      },
+      {
+        "title": "Make it yours",
+        "desc": "In Settings you can also record a different shortcut and pick a small, medium or large review panel."
       }
     ],
     "backLink": "← Back to Erratly"
   },
   "fr": {
     "title": "Comment fonctionne Erratly",
-    "intro": "Erratly est une petite appli de barre de menus — pas de fenêtre, pas de tableau de bord. Voici à quoi s'attendre, du premier lancement à l'usage quotidien, y compris le téléchargement du modèle (une seule fois).",
+    "intro": "Erratly est une petite appli de barre de menus — pas de tableau de bord, juste une fenêtre de réglages compacte. Voici à quoi s'attendre, du premier lancement à l'usage quotidien, y compris le téléchargement du modèle (une seule fois).",
     "requirements": {
       "label": "Prérequis",
       "items": [
@@ -77,12 +81,16 @@
       },
       {
         "title": "Corriger du texte n'importe où",
-        "desc": "Sélectionnez un texte mal orthographié, double-appuyez sur Ctrl, et Erratly le corrige sur place. L'icône affiche brièvement ⟳ pendant le traitement, puis revient à ✦.",
+        "desc": "Sélectionnez un texte mal orthographié, double-appuyez sur Ctrl (ou votre propre raccourci), et Erratly le corrige sur place. L'icône affiche brièvement ⟳ pendant le traitement, puis revient à ✦.",
         "screen": "/erratly.gif"
       },
       {
-        "title": "Tout se passe en local",
-        "desc": "Les corrections se font entièrement sur votre Mac grâce au modèle téléchargé — votre texte n'est jamais envoyé nulle part."
+        "title": "Local par défaut, distant si vous le souhaitez",
+        "desc": "Les corrections se font entièrement sur votre Mac grâce au modèle téléchargé — votre texte n'est jamais envoyé nulle part. Si vous préférez un modèle cloud, ouvrez Réglages… depuis la barre de menus, choisissez « Remote API » et saisissez une URL de base compatible OpenAI, un nom de modèle et une clé d'API (stockée dans le Trousseau)."
+      },
+      {
+        "title": "À votre façon",
+        "desc": "Dans les réglages, vous pouvez aussi enregistrer un autre raccourci et choisir un panneau de révision petit, moyen ou grand."
       }
     ],
     "backLink": "← Retour à Erratly"

@@ -6,25 +6,39 @@
     },
     {
       "q": "Does my text ever leave my Mac?",
-      "a": "No. Corrections happen entirely on-device — nothing is sent anywhere."
+      "a": "Not by default. Corrections run entirely on-device and nothing is sent anywhere. Your text only leaves your Mac if you choose to connect a remote API in Settings."
     },
     {
       "q": "What if it fixes the wrong thing?",
-      "a": "You can confirm or reject the correction."
+      "a": "You can reject the whole correction, or hover any single change and click its ✕ to revert just that one before accepting."
     },
     {
       "q": "Does it work in languages other than English?",
       "a": "Yes — Many languages are supported."
     },
     {
+      "q": "Can I change the shortcut?",
+      "a": "Yes. Double-tap Ctrl is the default, but you can record any key combination in Settings (click the ✦ menu bar icon → Settings…)."
+    },
+    {
+      "q": "Can I use OpenAI or another model instead of the local one?",
+      "a": "Yes. In Settings, switch to Remote API and enter a base URL, model name and your API key. It works with OpenAI and any OpenAI-compatible endpoint (OpenRouter, Groq, Ollama, LM Studio…). Your key is stored in the macOS Keychain."
+    },
+    {
       "q": "macOS says it can't verify the developer — what do I do?",
       "a": "Erratly isn't notarized by Apple yet, so macOS shows this warning on first launch. It's safe to open.",
-      "link": { "href": "/install", "text": "See how to open it →" }
+      "link": {
+        "href": "/install",
+        "text": "See how to open it →"
+      }
     },
     {
       "q": "Does Erratly need to download anything before I can use it?",
       "a": "Yes — on first launch, Erratly downloads its language model (~1.8 GB) once. After that it works fully offline.",
-      "link": { "href": "/how-it-works", "text": "See what to expect →" }
+      "link": {
+        "href": "/how-it-works",
+        "text": "See what to expect →"
+      }
     }
   ],
   "fr": [
@@ -34,25 +48,39 @@
     },
     {
       "q": "Mon texte quitte-t-il mon Mac ?",
-      "a": "Non. Les corrections se font entièrement sur l’appareil — rien n’est envoyé nulle part."
+      "a": "Pas par défaut. Les corrections se font entièrement sur l’appareil et rien n’est envoyé nulle part. Votre texte ne quitte votre Mac que si vous choisissez de connecter une API distante dans les réglages."
     },
     {
       "q": "Et si ça corrige la mauvaise chose ?",
-      "a": "Vous pouvez confirmer ou non la correction."
+      "a": "Vous pouvez refuser toute la correction, ou survoler une modification et cliquer sur son ✕ pour annuler uniquement celle-ci avant d’accepter."
     },
     {
       "q": "Ça marche dans d’autres langues que l’anglais ?",
       "a": "Oui — de nombreuses langues sont prises en charge."
     },
     {
+      "q": "Puis-je changer le raccourci ?",
+      "a": "Oui. Le double-appui sur Ctrl est le raccourci par défaut, mais vous pouvez enregistrer n’importe quelle combinaison de touches dans les réglages (cliquez sur l’icône ✦ de la barre de menus → Réglages…)."
+    },
+    {
+      "q": "Puis-je utiliser OpenAI ou un autre modèle à la place du modèle local ?",
+      "a": "Oui. Dans les réglages, choisissez « Remote API » et saisissez une URL de base, un nom de modèle et votre clé d’API. Ça fonctionne avec OpenAI et toute API compatible OpenAI (OpenRouter, Groq, Ollama, LM Studio…). Votre clé est stockée dans le Trousseau macOS."
+    },
+    {
       "q": "macOS dit qu'il ne peut pas vérifier le développeur — que faire ?",
       "a": "Erratly n'est pas encore notarié par Apple, donc macOS affiche cet avertissement au premier lancement. Vous pouvez l'ouvrir sans risque.",
-      "link": { "href": "/fr/install", "text": "Voir comment l'ouvrir →" }
+      "link": {
+        "href": "/fr/install",
+        "text": "Voir comment l'ouvrir →"
+      }
     },
     {
       "q": "Erratly doit-il télécharger quelque chose avant de pouvoir être utilisé ?",
       "a": "Oui — au premier lancement, Erratly télécharge son modèle de langage (~1,8 Go), une seule fois. Ensuite, il fonctionne entièrement hors ligne.",
-      "link": { "href": "/fr/how-it-works", "text": "Voir à quoi s'attendre →" }
+      "link": {
+        "href": "/fr/how-it-works",
+        "text": "Voir à quoi s'attendre →"
+      }
     }
   ]
 }
